@@ -141,7 +141,9 @@ typedef FIX::DOMDocumentPtr DOMDocumentPtr;
   }
 }
 
-%include "../C++/Exceptions.h"
+#ifndef SWIGLUA
+        %include "../C++/Exceptions.h"
+#endif
 %include "../C++/Field.h"
 %include "../C++/FieldMap.h"
 %include "../C++/Message.h"

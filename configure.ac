@@ -13,6 +13,7 @@ m4_include([m4/ax_allocator.m4])
 m4_include([m4/ax_python.m4])
 m4_include([m4/ax_ruby.m4])
 m4_include([m4/ax_java.m4])
+m4_include([m4/ax_lua.m4])
 AC_CONFIG_SRCDIR([src/ut.cpp])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([config])
@@ -35,6 +36,7 @@ AX_ALLOCATOR()
 AX_PYTHON()
 AX_RUBY()
 AX_JAVA()
+AX_LUA()
 
 ########################################
 # TBB 
@@ -81,9 +83,9 @@ fi
 LIBS="$STLPORT_LIBS $XML_LIBS $MYSQL_LIBS $POSTGRESQL_LDFLAGS $TBB_LIBS $LIBS"
 # gcc flags
 if test `uname` == SunOS; then
-   	SHAREDFLAGS="$TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $JAVA_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS"
+   	SHAREDFLAGS="$TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $JAVA_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS $LUA_CFLAGS"
 else
-	SHAREDFLAGS="-Wall -ansi -Wpointer-arith -Wwrite-strings -Wno-overloaded-virtual $TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS"
+	SHAREDFLAGS="-Wall -ansi -Wpointer-arith -Wwrite-strings -Wno-overloaded-virtual $TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS $LUA_CFLAGS"
 fi
 
 CFLAGS="$CFLAGS $SHAREDFLAGS"
@@ -280,6 +282,7 @@ AC_CONFIG_FILES([
     src/C++/test/Makefile
     src/python/Makefile
     src/ruby/Makefile
+    src/lua/Makefile
     bin/Makefile
     bin/cfg/Makefile
     spec/Makefile

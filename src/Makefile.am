@@ -6,7 +6,11 @@ if HAVE_RUBY
 RUBY_DIR = ruby
 endif
 
-SUBDIRS = C++ ${PYTHON_DIR} ${RUBY_DIR}
+if HAVE_LUA
+LUA_DIR = lua
+endif
+
+SUBDIRS = C++ ${PYTHON_DIR} ${RUBY_DIR} ${LUA_DIR}
 
 noinst_PROGRAMS = at ut pt
 

@@ -3,6 +3,7 @@ require 'Aggregator'
 require "GeneratorCPP"
 require "GeneratorPython"
 require "GeneratorRuby"
+require "GeneratorLua"
 
 def versionXML( type, major, minor, sp )
   dir = "../src"
@@ -24,7 +25,8 @@ def generateVersion( type, major, minor, sp, verid, aggregator )
   cpp = GeneratorCPP.new(type, major.to_s, minor.to_s, sp.to_s, verid.to_s, "#{dir}/C++")
   python = GeneratorPython.new(type, major.to_s, minor.to_s, sp.to_s, verid.to_s, "#{dir}/python")
   ruby = GeneratorRuby.new(type, major.to_s, minor.to_s, sp.to_s, verid.to_s, "#{dir}/ruby")
-  processor = Processor.new(xml, [cpp, python, ruby]).process( aggregator )
+  lua = GeneratorLua.new(type, major.to_s, minor.to_s, sp.to_s, verid.to_s, "#{dir}/lua")
+  processor = Processor.new(xml, [cpp, python, ruby, lua]).process( aggregator )
 end
 
 aggregator = Aggregator.new

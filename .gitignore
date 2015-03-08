@@ -43,6 +43,8 @@ examples/executor/C++/executor
 examples/ordermatch/ordermatch
 examples/ordermatch/test/ordermatch_ut
 examples/tradeclient/tradeclient
+examples/ordermatch/settings
+examples/ordermatch/store/
 include/
 src/at
 src/pt
@@ -57,3 +59,14 @@ autom4te.cache/
 lib/python
 COPYING
 INSTALL
+lib/lua/
+lib/ruby/
+spec/spec
+src/python/spec
+src/ruby/spec
+src/ruby/quickfix.bundle
+src/lua/lua-5.1.5/
+src/lua/test
+src/lua/test_log
+src/lua/test_store
+src/lua/spec
