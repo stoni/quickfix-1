@@ -38,8 +38,7 @@
     if (!lua_isfunction(L, -1)) {                             \
         luaL_error(L, "%s(..) function not present", name);   \
     }                                                         \
-    FIX::SessionID *sarg = new FIX::SessionID(arg0);          \
-    SWIG_NewPointerObj(L,sarg,SWIGTYPE_p_SessionID,1);        \
+    SWIG_NewPointerObj(L,&arg0,SWIGTYPE_p_SessionID,0);       \
     if (lua_pcall(L, 1, 0, 0) != 0) {                         \
         luaL_error(L, "error running function '%s': %s",      \
             name, lua_tostring(L, -1));                       \
@@ -51,10 +50,8 @@
     if (!lua_isfunction(L, -1)) {                             \
         luaL_error(L, "%s(..) function not present", name);   \
     }                                                         \
-    FIX::SessionID *sarg = new FIX::SessionID(arg1);          \
-    FIX::Message *marg = new FIX::Message(arg0);              \
-    SWIG_NewPointerObj(L,marg,SWIGTYPE_p_FIX__Message,1);     \
-    SWIG_NewPointerObj(L,sarg,SWIGTYPE_p_SessionID,1);        \
+    SWIG_NewPointerObj(L,&arg0,SWIGTYPE_p_FIX__Message,0);    \
+    SWIG_NewPointerObj(L,&arg1,SWIGTYPE_p_SessionID,0);       \
     if (lua_pcall(L, 2, 0, 0) != 0) {                         \
         luaL_error(L, "error running function '%s': %s",      \
             name, lua_tostring(L, -1));                       \

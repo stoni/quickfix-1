@@ -136,7 +136,11 @@ class GeneratorLua
   end
   
   def fields(name, number, type, values)
-    @f.puts tabs + "function #{name}(value) return quickfix.#{fieldType(name, type)}Field(#{number}, value) end"
+    @f.puts tabs + "function #{name}(value) "
+    @f.puts tabs + "  local ret = quickfix.#{fieldType(name, type)}Field(#{number})"
+    @f.puts tabs + "  if value then ret:setValue(value) end"
+    @f.puts tabs + "  return ret"
+    @f.puts tabs + "end"
   end
 
   def fieldsEnd
