@@ -44,96 +44,96 @@
 
 %typemap(throws) FieldNotFound
 %{
-  luaL_error(L, "FieldNotFound");
+    std::cout << "FieldNotFound: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) InvalidMessage
 %{
-  luaL_error(L, "InvalidMessage");
+    std::cout << "InvalidMessage: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) FieldConvertError
 %{
-  luaL_error(L, "FieldConvertError");
+    std::cout << "FieldConvertError: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) ConfigError
 %{
-  luaL_error(L, "ConfigError");
+    std::cout << "ConfigError: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) MessageParseError
 %{
-  luaL_error(L, "MessageParseError");
+    std::cout << "MessageParseError: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) NoTagValue
 %{
-  luaL_error(L, "NoTagValue");
+    std::cout << "NoTagValue: " << $1.what() << std::endl;
 %}
 %typemap(throws) RepeatedTag
 %{
-  luaL_error(L, "RepeatedTag");
+    std::cout << "RepeatedTag: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) IncorrectDataFormat
 %{
-  luaL_error(L, "IncorrectDataFormat");
+    std::cout << "IncorrectDataFormat: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) IOException
 %{
-  luaL_error(L, "IOException");
+    std::cout << "IOException: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) SessionNotFound
 %{
-  luaL_error(L, "SessionNotFound");
+    std::cout << "SessionNotFound: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) RuntimeError
 %{
-  luaL_error(L, "RuntimeError");
+    std::cout << "RuntimeError: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) UnsupportedMessageType
 %{
-  luaL_error(L, "UnsupportedMessageType");
+    std::cout << "UnsupportedMessageType: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) IncorrectTagValue
 %{
-  luaL_error(L, "IncorrectTagValue");
+    std::cout << "IncorrectTagValue: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) RejectLogon
 %{
-  luaL_error(L, "RejectLogon");
+    std::cout << "RejectLogon: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) DoNotSend
 %{
-  luaL_error(L, "DoNotSend");
+    std::cout << "DoNotSend: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) SocketException
 %{
-  luaL_error(L, "SocketException");
+    std::cout << "SocketException: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) SocketSendFailed
 %{
-  luaL_error(L, "SocketSendFailed");
+    std::cout << "SocketSendFailed: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) SocketRecvFailed
 %{
-  luaL_error(L, "SocketRecvFailed");
+    std::cout << "SocketRecvFailed: " << $1.what() << std::endl;
 %}
 
 %typemap(throws) SocketCloseFailed
 %{
-  luaL_error(L, "SocketCloseFailed");
+    std::cout << "SocketCloseFailed: " << $1.what() << std::endl;
 %}
 
 %{
