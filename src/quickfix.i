@@ -17,7 +17,11 @@
 %rename(SocketAcceptorBase) FIX::SocketAcceptor;
 
 %{
-#include <config.h>
+#ifdef WIN32
+    #include <config_windows.h>
+#else
+    #include <config.h>
+#endif
 #include <Exceptions.h>
 #include <Field.h>
 #include <Message.h>
