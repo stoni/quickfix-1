@@ -66,7 +66,10 @@ src/python/spec
 src/ruby/spec
 src/ruby/quickfix.bundle
 src/lua/lua-5.1.5/
+src/lua/lua-5.1.4/
 src/lua/test
 src/lua/test_log
 src/lua/test_store
 src/lua/spec
+src/lua/quickfixlua/Debug
+src/lua/quickfixlua/Release
