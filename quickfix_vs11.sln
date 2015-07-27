@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_acceptance_runner", "t
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest++_vs11", "UnitTest++\UnitTest++_vs11.vcxproj", "{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quickfixlua", "src\lua\quickfixlua\quickfixlua.vcxproj", "{3E48595E-9E72-4037-8E2C-D3562708ED59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +126,16 @@ Global
 		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Release|Win32.ActiveCfg = Release|Win32
 		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Release|Win32.Build.0 = Release|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Debug|Win32.Build.0 = Debug|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Release|Any CPU.ActiveCfg = Release|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Release|Win32.ActiveCfg = Release|Win32
+		{3E48595E-9E72-4037-8E2C-D3562708ED59}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
