@@ -44,96 +44,96 @@
 
 %typemap(throws) FieldNotFound
 %{
-  luaL_error(L, "FieldNotFound: %s", $1.type.c_str());
+  lua_error(L, "FieldNotFound");
 %}
 
 %typemap(throws) InvalidMessage
 %{
-  luaL_error(L, "InvalidMessage: %s", $1.type.c_str());
+  lua_error(L, "InvalidMessage");
 %}
 
 %typemap(throws) FieldConvertError
 %{
-  luaL_error(L, "FieldConvertError: %s", $1.type.c_str());
+  lua_error(L, "FieldConvertError");
 %}
 
 %typemap(throws) ConfigError
 %{
-  luaL_error(L, "ConfigError: %s", $1.type.c_str());
+  lua_error(L, "ConfigError");
 %}
 
 %typemap(throws) MessageParseError
 %{
-  luaL_error(L, "MessageParseError: %s", $1.type.c_str());
+  lua_error(L, "MessageParseError");
 %}
 
 %typemap(throws) NoTagValue
 %{
-  luaL_error(L, "NoTagValue: %s", $1.type.c_str());
+  lua_error(L, "NoTagValue");
 %}
 %typemap(throws) RepeatedTag
 %{
-  luaL_error(L, "RepeatedTag: %s", $1.type.c_str());
+  lua_error(L, "RepeatedTag");
 %}
 
 %typemap(throws) IncorrectDataFormat
 %{
-  luaL_error(L, "IncorrectDataFormat: %s", $1.type.c_str());
+  lua_error(L, "IncorrectDataFormat");
 %}
 
 %typemap(throws) IOException
 %{
-  luaL_error(L, "IOException: %s", $1.type.c_str());
+  lua_error(L, "IOException");
 %}
 
 %typemap(throws) SessionNotFound
 %{
-  luaL_error(L, "SessionNotFound: %s", $1.type.c_str());
+  lua_error(L, "SessionNotFound");
 %}
 
 %typemap(throws) RuntimeError
 %{
-  luaL_error(L, "RuntimeError: %s", $1.type.c_str());
+  lua_error(L, "RuntimeError");
 %}
 
 %typemap(throws) UnsupportedMessageType
 %{
-  luaL_error(L, "UnsupportedMessageType: %s", $1.type.c_str());
+  lua_error(L, "UnsupportedMessageType");
 %}
 
 %typemap(throws) IncorrectTagValue
 %{
-  luaL_error(L, "IncorrectTagValue: %s", $1.type.c_str());
+  lua_error(L, "IncorrectTagValue");
 %}
 
 %typemap(throws) RejectLogon
 %{
-  luaL_error(L, "RejectLogon: %s", $1.type.c_str());
+  lua_error(L, "RejectLogon");
 %}
 
 %typemap(throws) DoNotSend
 %{
-  luaL_error(L, "DoNotSend: %s", $1.type.c_str());
+  lua_error(L, "DoNotSend");
 %}
 
 %typemap(throws) SocketException
 %{
-  luaL_error(L, "SocketException: %s", $1.type.c_str());
+  lua_error(L, "SocketException");
 %}
 
 %typemap(throws) SocketSendFailed
 %{
-  luaL_error(L, "SocketSendFailed: %s", $1.type.c_str());
+  lua_error(L, "SocketSendFailed");
 %}
 
 %typemap(throws) SocketRecvFailed
 %{
-  luaL_error(L, "SocketRecvFailed: %s", $1.type.c_str());
+  lua_error(L, "SocketRecvFailed");
 %}
 
 %typemap(throws) SocketCloseFailed
 %{
-  luaL_error(L, "SocketCloseFailed: %s", $1.type.c_str());
+  lua_error(L, "SocketCloseFailed");
 %}
 
 %{
